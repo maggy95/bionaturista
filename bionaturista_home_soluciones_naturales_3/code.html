@@ -36,6 +36,18 @@
         @layer base { body { font-family: "Manrope", sans-serif; } }
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        .stagger-reveal > * { opacity: 0; transform: translateY(20px); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .stagger-reveal.active > * { opacity: 1; transform: translateY(0); }
+        
+        /* Stagger delays */
+        .stagger-reveal.active > *:nth-child(1) { transition-delay: 100ms; }
+        .stagger-reveal.active > *:nth-child(2) { transition-delay: 200ms; }
+        .stagger-reveal.active > *:nth-child(3) { transition-delay: 300ms; }
+        .stagger-reveal.active > *:nth-child(4) { transition-delay: 400ms; }
+        .stagger-reveal.active > *:nth-child(n+5) { transition-delay: 500ms; }
+        
+        .magnetic-wrap { display: inline-block; transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
     </style>
 </head>
 
@@ -70,8 +82,7 @@
         <div class="max-w-7xl mx-auto px-4 md:px-10 h-full flex items-center justify-between"
             style="max-width: 1280px; padding: 0 40px;">
             <div class="flex items-center gap-2.5" style="gap: 10px;">
-                <a href="../index.html" class="flex items-center gap-2.5"
-                    style="text-decoration:none;">
+                <a href="../index.html" class="flex items-center gap-2.5" style="text-decoration:none;">
                     <div class="p-2 bg-gradient-to-br from-vibrant-green to-primary-dark rounded-xl text-white shadow-lg shadow-vibrant-green/20"
                         style="padding: 8px;">
                         <span class="material-symbols-outlined text-3xl" style="font-size: 30px;">eco</span>
@@ -129,9 +140,11 @@
                     <h2 class="text-6xl font-black text-white leading-tight" style="font-size: 56px;">POTENCIA TU <span
                             class="text-vibrant-green">SISTEMA INMUNE</span> CON LA NUEVA LÍNEA PRO</h2>
                     <div class="flex gap-4 pt-4">
-                        <button
-                            class="bg-vibrant-green text-white px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:scale-105 transition-transform">Descubrir
-                            Ahora</button>
+                        <div class="magnetic-wrap">
+                            <button
+                                class="bg-vibrant-green text-white px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-primary-dark transition-all">Descubrir
+                                Ahora</button>
+                        </div>
                         <button
                             class="border border-white/20 text-white px-8 py-4 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-white/5 transition-colors">Ver
                             Catálogo</button>
@@ -224,7 +237,7 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 reveal stagger-reveal">
                         <!-- Product 1 -->
                         <div class="bg-white rounded-[32px] p-6 border border-slate-100 shadow-sm hover:shadow-2xl transition-all group reveal cursor-pointer"
                             onclick="location.href='../interna_de_producto_detalle_completo/code.html'">
@@ -358,8 +371,7 @@
                     style="font-size: 18px; margin-bottom: 32px; color: var(--vibrant-green);">Explorar</h4>
                 <ul class="space-y-4 text-slate-400 font-bold text-sm"
                     style="list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 14px;">
-                    <li><a class="hover:text-white transition-colors"
-                            href="../index.html"
+                    <li><a class="hover:text-white transition-colors" href="../index.html"
                             style="text-decoration: none; color: #94a3b8;">Nuestra Historia</a></li>
                     <li><a class="hover:text-white transition-colors"
                             href="../bionaturista_home_soluciones_naturales_3/code.html"
@@ -404,6 +416,20 @@
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+        // Magnetic Button Effect
+        document.querySelectorAll('.magnetic-wrap').forEach(wrap => {
+            const btn = wrap.querySelector('button');
+            wrap.addEventListener('mousemove', (e) => {
+                const rect = wrap.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            });
+            wrap.addEventListener('mouseleave', () => {
+                btn.style.transform = `translate(0px, 0px)`;
+            });
+        });
     </script>
 </body>
 
