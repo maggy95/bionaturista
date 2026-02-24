@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Bioconsejos - Bionaturista</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-dark": "#1a4d2e",
+                        "primary-bright": "#4ade80",
+                        "vibrant-green": "#22c55e",
+                        "deep-orange": "#f97316",
+                        "golden-yellow": "#fbbf24",
+                        "background-light": "#ffffff",
+                        "background-dark": "#06150b",
+                        "accent-pink": "#ed1e79",
+                    },
+                    fontFamily: { "display": ["Manrope", "sans-serif"] },
+                    borderRadius: { "DEFAULT": "4px", "lg": "8px", "xl": "12px", "2xl": "16px", "3xl": "24px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base { body { font-family: "Manrope", sans-serif; } }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+    <!-- CANONICAL HEADER START -->
+    <div class="bg-primary-dark text-white flex flex-wrap justify-between items-center text-xs font-bold tracking-wide border-b border-primary-bright/20"
+        style="padding: 10px 40px; height: 40px;">
+        <div class="flex flex-wrap" style="gap: 32px;">
+            <span class="flex items-center gap-2" style="gap: 8px;"><span
+                    class="material-symbols-outlined text-sm text-primary-bright" style="font-size: 14px;">call</span>
+                +51 987 654 321</span>
+            <span class="flex items-center gap-2" style="gap: 8px;"><span
+                    class="material-symbols-outlined text-sm text-primary-bright" style="font-size: 14px;">call</span>
+                +51 912 345 678</span>
+            <span class="flex items-center gap-2" style="gap: 8px;"><span
+                    class="material-symbols-outlined text-sm text-primary-bright" style="font-size: 14px;">call</span>
+                +51 900 000 000</span>
+        </div>
+        <div class="hidden sm:flex gap-6 uppercase text-[10px]" style="gap: 24px;">
+            <a class="hover:text-golden-yellow transition-colors flex items-center gap-1" href="#"
+                style="gap: 4px;"><span class="material-symbols-outlined text-xs"
+                    style="font-size: 12px;">location_on</span> Encuentra tu Tienda</a>
+            <a class="hover:text-golden-yellow transition-colors flex items-center gap-1" href="#"
+                style="gap: 4px;"><span class="material-symbols-outlined text-xs"
+                    style="font-size: 12px;">local_shipping</span> Seguimiento</a>
+        </div>
+    </div>
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-b border-slate-100 dark:border-white/5"
+        style="height: 80px;">
+        <div class="max-w-7xl mx-auto px-4 md:px-10 h-full flex items-center justify-between"
+            style="max-width: 1280px; padding: 0 40px;">
+            <div class="flex items-center gap-2.5" style="gap: 10px;">
+                <a href="../bionaturista_home_soluciones_naturales_1/code.html" class="flex items-center gap-2.5"
+                    style="text-decoration:none;">
+                    <div class="p-2 bg-gradient-to-br from-vibrant-green to-primary-dark rounded-xl text-white shadow-lg shadow-vibrant-green/20"
+                        style="padding: 8px;">
+                        <span class="material-symbols-outlined text-3xl" style="font-size: 30px;">eco</span>
+                    </div>
+                    <h1 class="text-2xl font-black tracking-tighter text-primary-dark dark:text-white uppercase"
+                        style="font-size: 24px;">Bionaturista</h1>
+                </a>
+            </div>
+            <nav class="hidden lg:flex items-center font-extrabold text-[13px] uppercase tracking-widest"
+                style="gap: 32px; font-size: 13px;">
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors"
+                    href="../bionaturista_home_soluciones_naturales_2/code.html">Nosotros</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors"
+                    href="../bionaturista_home_soluciones_naturales_3/code.html">Tienda</a>
+                <a class="text-vibrant-green relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-vibrant-green font-black"
+                    href="../bionaturista_home_soluciones_naturales_4/code.html">Bioconsejos</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors" href="#">Tu
+                    Negocio Propio</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors"
+                    href="#">Contacto</a>
+            </nav>
+            <div class="flex items-center" style="gap: 20px;">
+                <div class="hidden md:flex relative group">
+                    <input
+                        class="bg-slate-100 dark:bg-white/5 border-none focus:ring-2 focus:ring-vibrant-green rounded-full px-5 py-2 text-sm w-44 transition-all focus:w-60"
+                        placeholder="Buscar..." type="text" style="width: 176px; padding: 8px 20px;" />
+                    <span
+                        class="material-symbols-outlined absolute right-3 top-2 text-slate-400 group-focus-within:text-vibrant-green"
+                        style="right: 12px; top: 8px;">search</span>
+                </div>
+                <button
+                    class="relative p-2 text-slate-700 dark:text-slate-200 hover:text-vibrant-green transition-colors">
+                    <span class="material-symbols-outlined text-2xl" style="font-size: 24px;">shopping_cart</span>
+                    <span
+                        class="absolute -top-1 -right-1 bg-deep-orange text-white text-[10px] font-black rounded-full w-5 h-5 flex items-center justify-center shadow-md"
+                        style="width: 20px; height: 20px; top: -4px; right: -4px;">2</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- CANONICAL HEADER END -->
+
+    <main>
+        <!-- Category Navigation -->
+        <nav class="bg-slate-50 dark:bg-white/5 border-b border-slate-100 dark:border-white/5 h-16">
+            <div class="max-w-7xl mx-auto px-4 md:px-10 h-full flex items-center justify-center gap-10 overflow-x-auto"
+                style="max-width: 1280px; padding: 0 40px;">
+                <a href="#"
+                    class="text-[10px] font-black uppercase tracking-widest text-vibrant-green border-b-2 border-vibrant-green h-full flex items-center">Todos</a>
+                <a href="#"
+                    class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 hover:text-vibrant-green transition-colors h-full flex items-center">Nutrición</a>
+                <a href="#"
+                    class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 hover:text-vibrant-green transition-colors h-full flex items-center">Belleza</a>
+                <a href="#"
+                    class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 hover:text-vibrant-green transition-colors h-full flex items-center">Bienestar</a>
+                <a href="#"
+                    class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 hover:text-vibrant-green transition-colors h-full flex items-center">Recetas</a>
+                <a href="#"
+                    class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 hover:text-vibrant-green transition-colors h-full flex items-center">Superalimentos</a>
+            </div>
+        </nav>
+
+        <!-- Featured Section -->
+        <section class="max-w-7xl mx-auto px-4 md:px-10 py-12" style="max-width: 1280px; padding: 48px 40px;">
+            <div class="relative h-[600px] rounded-[48px] overflow-hidden group reveal">
+                <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlHYKkPtXUb2FnbpWaKQYrJ1TX18XWOYT16460ZNURgb_ldrV2LvT3tT1ZBeAvRW0J7bgdhkZtnd1JTP9Q3IlJSDKrPon7BVIzXnmOi5Jqr71aCa9APUBL_05LTe3hSZdqOYbyp96A6Blx6JbR9hxaH9BeBm0rxenec7gKu79iyFuA0rEHwGLZsg7kFt64SSPSmqXqhyTRKoDYqCU51g7tzdlcap9WLM-yY_haQdzkvbcA83_7dFUKW72gbImvMT5fSsGK6yqGXnc"
+                    alt="Featured" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-20">
+                    <div class="max-w-2xl space-y-6">
+                        <span
+                            class="bg-vibrant-green text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Artículo
+                            Destacado</span>
+                        <h2 class="text-6xl font-black text-white leading-tight" style="font-size: 56px;">El Renacer de
+                            los Sabores Ancestrales: Maca y Camu Camu</h2>
+                        <p class="text-white/80 text-xl max-w-xl">Descubre cómo los superalimentos peruanos están
+                            transformando la salud global y cómo incorporarlos en tu rutina diaria.</p>
+                        <div class="flex items-center gap-6 pt-4">
+                            <button
+                                class="bg-vibrant-green text-white px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest hover:scale-105 transition-transform"
+                                onclick="location.href='../interna_de_blog_lectura_inmersiva/code.html'">Leer
+                                Artículo</button>
+                            <span class="text-white/60 text-xs font-bold uppercase tracking-widest">Junio 24, 2024 • 12
+                                min lectura</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Grid -->
+        <section class="max-w-7xl mx-auto px-4 md:px-10 py-16" style="max-width: 1280px; padding: 64px 40px;">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <!-- Articles Grid -->
+                <div class="flex-1 space-y-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <!-- Articulo 1 -->
+                        <div class="group reveal cursor-pointer"
+                            onclick="location.href='../interna_de_blog_lectura_inmersiva/code.html'">
+                            <div class="aspect-[4/3] rounded-[32px] overflow-hidden mb-6">
+                                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=800"
+                                    alt="Ar1" />
+                            </div>
+                            <div class="space-y-4">
+                                <span
+                                    class="text-[10px] font-black uppercase text-vibrant-green tracking-widest">Nutrición</span>
+                                <h3
+                                    class="text-2xl font-black text-primary-dark group-hover:text-vibrant-green transition-colors">
+                                    Guía completa de granos andinos: Quinua y Kiwicha</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed">Aprende a preparar estos tesoros
+                                    nutricionales y descubre por qué son considerados proteínas completas.</p>
+                                <div class="flex items-center justify-between pt-2">
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Jun
+                                        15, 2024 • 5 min</span>
+                                    <span
+                                        class="text-primary-dark font-black text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">Ver
+                                        Más <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Articulo 2 -->
+                        <div class="group reveal cursor-pointer" onclick="location.href='#'"
+                            style="transition-delay: 100ms;">
+                            <div class="aspect-[4/3] rounded-[32px] overflow-hidden mb-6">
+                                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    src="https://images.unsplash.com/photo-1540344299330-43575d4d33c5?auto=format&fit=crop&q=80&w=800"
+                                    alt="Ar2" />
+                            </div>
+                            <div class="space-y-4">
+                                <span
+                                    class="text-[10px] font-black uppercase text-accent-pink tracking-widest">Bienestar</span>
+                                <h3
+                                    class="text-2xl font-black text-primary-dark group-hover:text-accent-pink transition-colors">
+                                    Mindfulness en la oficina: Tips prácticos</h3>
+                                <p class="text-slate-500 text-sm leading-relaxed">Reduce el estrés laboral con
+                                    ejercicios de respiración de 3 minutos que puedes hacer en tu escritorio.</p>
+                                <div class="flex items-center justify-between pt-2">
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Jun
+                                        12, 2024 • 8 min</span>
+                                    <span
+                                        class="text-primary-dark font-black text-xs uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all">Ver
+                                        Más <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-8 flex justify-center reveal">
+                        <button
+                            class="border-2 border-slate-100 px-12 py-5 rounded-2xl text-primary-dark font-black uppercase text-xs tracking-widest hover:bg-slate-50 transition-colors">Cargar
+                            más artículos</button>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="w-full lg:w-96 space-y-12 reveal">
+                    <!-- Search -->
+                    <div class="bg-slate-50 dark:bg-white/5 p-8 rounded-[40px] space-y-6">
+                        <h4 class="text-sm font-black uppercase tracking-widest text-primary-dark">Buscar</h4>
+                        <div class="relative">
+                            <input type="text"
+                                class="w-full bg-white dark:bg-background-dark border-none rounded-2xl py-4 px-6 text-sm focus:ring-2 focus:ring-vibrant-green shadow-sm"
+                                placeholder="Escribe aquí..." />
+                            <button
+                                class="absolute right-2 top-2 w-10 h-10 bg-vibrant-green text-white rounded-xl flex items-center justify-center hover:scale-110 transition-transform"><span
+                                    class="material-symbols-outlined">search</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Lo más leído -->
+                    <div class="space-y-8">
+                        <h4
+                            class="text-sm font-black uppercase tracking-widest text-primary-dark flex items-center gap-2 px-4 border-l-4 border-vibrant-green">
+                            Lo más leído</h4>
+                        <div class="space-y-6">
+                            <div class="flex gap-6 group cursor-pointer">
+                                <span
+                                    class="text-4xl font-black text-slate-100 group-hover:text-vibrant-green/20 transition-colors leading-none">01</span>
+                                <div>
+                                    <h5
+                                        class="font-black text-primary-dark leading-tight group-hover:text-vibrant-green transition-colors">
+                                        Beneficios del Aceite de Coco en ayunas</h5>
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Salud</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 group cursor-pointer">
+                                <span
+                                    class="text-4xl font-black text-slate-100 group-hover:text-vibrant-green/20 transition-colors leading-none">02</span>
+                                <div>
+                                    <h5
+                                        class="font-black text-primary-dark leading-tight group-hover:text-vibrant-green transition-colors">
+                                        Cómo cuidar tu piel en invierno</h5>
+                                    <span class="text-[10px] uppercase font-bold text-slate-400">Belleza</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Sidebar -->
+                    <div class="bg-primary-dark rounded-[40px] p-10 text-white space-y-8 relative overflow-hidden">
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-vibrant-green/20 rounded-full blur-3xl">
+                        </div>
+                        <h4 class="text-2xl font-black leading-tight">ÚNETE A LA BIOCOMUNIDAD</h4>
+                        <p class="text-white/60 text-sm leading-relaxed">Recibe consejos exclusivos de nuestros expertos
+                            directamente en tu correo.</p>
+                        <form class="space-y-4">
+                            <input type="email"
+                                class="w-full bg-white/10 border-white/20 rounded-2xl py-4 px-6 text-sm placeholder:text-white/40 focus:ring-vibrant-green"
+                                placeholder="Tu email" />
+                            <button
+                                class="w-full bg-white text-primary-dark font-black py-4 rounded-2xl text-xs uppercase tracking-widest hover:scale-105 transition-transform">Suscribirme</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Partner Carousel -->
+        <section class="max-w-7xl mx-auto px-4 md:px-10 py-24 border-t border-slate-100"
+            style="max-width: 1280px; padding: 96px 40px;">
+            <div
+                class="flex flex-wrap justify-center gap-16 grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+                <div class="h-12 w-32 bg-slate-200 rounded-lg animate-pulse"></div>
+                <div class="h-12 w-32 bg-slate-200 rounded-lg animate-pulse"></div>
+                <div class="h-12 w-32 bg-slate-200 rounded-lg animate-pulse"></div>
+                <div class="h-12 w-32 bg-slate-200 rounded-lg animate-pulse"></div>
+                <div class="h-12 w-32 bg-slate-200 rounded-lg animate-pulse"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CANONICAL FOOTER START -->
+    <footer class="bg-background-dark text-white pt-24 pb-12 px-4 md:px-10 border-t border-white/5"
+        style="padding: 96px 40px; background: #06150b;">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 mb-20"
+            style="max-width: 1280px; gap: 64px; margin-bottom: 80px;">
+            <div class="space-y-8" style="display: flex; flex-direction: column; gap: 32px;">
+                <div class="flex items-center gap-3">
+                    <div class="p-1.5 bg-vibrant-green rounded-lg text-white" style="padding: 6px; border-radius: 8px;">
+                        <span class="material-symbols-outlined text-2xl" style="font-size: 24px;">eco</span>
+                    </div>
+                    <h2 class="text-2xl font-black tracking-tighter uppercase" style="font-size: 24px;">Bionaturista
+                    </h2>
+                </div>
+                <p class="text-slate-400 leading-relaxed font-medium">Liderando la industria de productos naturales por
+                    más de 30 años, fusionando ciencia avanzada con sabiduría ancestral.</p>
+                <div class="flex gap-4" style="gap: 16px;">
+                    <a class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-vibrant-green transition-all"
+                        style="width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; text-decoration: none; color: white;"
+                        href="#"><span class="material-symbols-outlined text-xl">social_leaderboard</span></a>
+                    <a class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-vibrant-green transition-all"
+                        style="width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; text-decoration: none; color: white;"
+                        href="#"><span class="material-symbols-outlined text-xl">camera_alt</span></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-black text-lg mb-8 text-vibrant-green uppercase tracking-widest"
+                    style="font-size: 18px; margin-bottom: 32px; color: var(--vibrant-green);">Explorar</h4>
+                <ul class="space-y-4 text-slate-400 font-bold text-sm"
+                    style="list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 14px;">
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_1/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Nuestra Historia</a></li>
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_3/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Productos Estrella</a></li>
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_4/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Catálogo Digital</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black text-lg mb-8 text-vibrant-green uppercase tracking-widest"
+                    style="font-size: 18px; margin-bottom: 32px; color: var(--vibrant-green);">Soporte</h4>
+                <ul class="space-y-4 text-slate-400 font-bold text-sm"
+                    style="list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 14px;">
+                    <li><a class="hover:text-white transition-colors" href="#"
+                            style="text-decoration: none; color: #94a3b8;">Preguntas Frecuentes</a></li>
+                    <li><a class="hover:text-white transition-colors" href="#"
+                            style="text-decoration: none; color: #94a3b8;">Libro de Reclamaciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black text-lg mb-8 text-vibrant-green uppercase tracking-widest"
+                    style="font-size: 18px; margin-bottom: 32px; color: var(--vibrant-green);">BioNews</h4>
+                <form class="flex flex-col gap-3" style="display: flex; flex-direction: column; gap: 12px;">
+                    <input
+                        class="bg-white/5 border-white/10 rounded-2xl px-5 py-4 flex-1 focus:ring-vibrant-green text-sm"
+                        placeholder="Tu correo electrónico" type="email"
+                        style="padding: 16px 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white;" />
+                    <button
+                        class="bg-vibrant-green text-primary-dark font-black py-4 rounded-2xl hover:bg-white transition-all uppercase text-[10px] tracking-[0.2em]"
+                        style="padding: 16px; border-radius: 16px; border:none; cursor:pointer;">Suscribirme</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- CANONICAL FOOTER END -->
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+
+</html>

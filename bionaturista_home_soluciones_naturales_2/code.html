@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nosotros - Bionaturista</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-dark": "#1a4d2e",
+                        "primary-bright": "#4ade80",
+                        "vibrant-green": "#22c55e",
+                        "deep-orange": "#f97316",
+                        "golden-yellow": "#fbbf24",
+                        "background-light": "#ffffff",
+                        "background-dark": "#06150b",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "4px", "lg": "8px", "xl": "12px", "2xl": "16px", "3xl": "24px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base { body { font-family: "Manrope", sans-serif; } }
+        .leaf-bg {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAtYQCILSlztloYMkwX4w_e-zb4HQ96DlscJQGqh3xiNajPgqJf453TO32z-038njdUuouqwhVFSkROFcaNwka-D5zFhICtpT-qj-KEJxJxkXiE6V8EbSncUvaXwhH36DChecz58lRpeDTxwu8JDqgvlp7jmQVr9FumRLYljxzegcYDv-jbaZokLe4W4f_6P7sZF7f92F0ILLeANrdV_IBFNd3-P7U8yCn9cJwQX_BvfOUNEVUmvJI_7FMr8mqX5Z46klhGvA-Knak);
+            opacity: 0.05
+        }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .text-gradient {
+            background: linear-gradient(to right, #1a4d2e, #22c55e, #f97316, #ed1e79);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+    <!-- CANONICAL HEADER START -->
+    <div class="bg-primary-dark text-white flex flex-wrap justify-between items-center text-xs font-bold tracking-wide border-b border-primary-bright/20"
+        style="padding: 10px 40px; height: 40px;">
+        <div class="flex flex-wrap" style="gap: 32px;">
+            <span class="flex items-center gap-2" style="gap: 8px;"><span
+                    class="material-symbols-outlined text-sm text-primary-bright" style="font-size: 14px;">call</span>
+                +51 987 654 321</span>
+            <span class="flex items-center gap-2" style="gap: 8px;"><span
+                    class="material-symbols-outlined text-sm text-primary-bright" style="font-size: 14px;">call</span>
+                +51 912 345 678</span>
+            <span class="flex items-center gap-2" style="gap: 8px;"><span
+                    class="material-symbols-outlined text-sm text-primary-bright" style="font-size: 14px;">call</span>
+                +51 900 000 000</span>
+        </div>
+        <div class="hidden sm:flex gap-6 uppercase text-[10px]" style="gap: 24px;">
+            <a class="hover:text-golden-yellow transition-colors flex items-center gap-1" href="#"
+                style="gap: 4px;"><span class="material-symbols-outlined text-xs"
+                    style="font-size: 12px;">location_on</span> Encuentra tu Tienda</a>
+            <a class="hover:text-golden-yellow transition-colors flex items-center gap-1" href="#"
+                style="gap: 4px;"><span class="material-symbols-outlined text-xs"
+                    style="font-size: 12px;">local_shipping</span> Seguimiento</a>
+        </div>
+    </div>
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-b border-slate-100 dark:border-white/5"
+        style="height: 80px;">
+        <div class="max-w-7xl mx-auto px-4 md:px-10 h-full flex items-center justify-between"
+            style="max-width: 1280px; padding: 0 40px;">
+            <div class="flex items-center gap-2.5" style="gap: 10px;">
+                <a href="../bionaturista_home_soluciones_naturales_1/code.html" class="flex items-center gap-2.5"
+                    style="text-decoration:none;">
+                    <div class="p-2 bg-gradient-to-br from-vibrant-green to-primary-dark rounded-xl text-white shadow-lg shadow-vibrant-green/20"
+                        style="padding: 8px;">
+                        <span class="material-symbols-outlined text-3xl" style="font-size: 30px;">eco</span>
+                    </div>
+                    <h1 class="text-2xl font-black tracking-tighter text-primary-dark dark:text-white uppercase"
+                        style="font-size: 24px;">Bionaturista</h1>
+                </a>
+            </div>
+            <nav class="hidden lg:flex items-center font-extrabold text-[13px] uppercase tracking-widest"
+                style="gap: 32px; font-size: 13px;">
+                <a class="text-vibrant-green relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-vibrant-green font-black"
+                    href="../bionaturista_home_soluciones_naturales_2/code.html">Nosotros</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors"
+                    href="../bionaturista_home_soluciones_naturales_3/code.html">Tienda</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors"
+                    href="../bionaturista_home_soluciones_naturales_4/code.html">Bioconsejos</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors" href="#">Tu
+                    Negocio Propio</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors"
+                    href="#">Contacto</a>
+            </nav>
+            <div class="flex items-center" style="gap: 20px;">
+                <div class="hidden md:flex relative group">
+                    <input
+                        class="bg-slate-100 dark:bg-white/5 border-none focus:ring-2 focus:ring-vibrant-green rounded-full px-5 py-2 text-sm w-44 transition-all focus:w-60"
+                        placeholder="Buscar..." type="text" style="width: 176px; padding: 8px 20px;" />
+                    <span
+                        class="material-symbols-outlined absolute right-3 top-2 text-slate-400 group-focus-within:text-vibrant-green"
+                        style="right: 12px; top: 8px;">search</span>
+                </div>
+                <button
+                    class="relative p-2 text-slate-700 dark:text-slate-200 hover:text-vibrant-green transition-colors">
+                    <span class="material-symbols-outlined text-2xl" style="font-size: 24px;">shopping_cart</span>
+                    <span
+                        class="absolute -top-1 -right-1 bg-deep-orange text-white text-[10px] font-black rounded-full w-5 h-5 flex items-center justify-center shadow-md"
+                        style="width: 20px; height: 20px; top: -4px; right: -4px;">2</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- CANONICAL HEADER END -->
+
+    <main class="relative">
+        <div class="leaf-bg absolute inset-0 z-0"></div>
+
+        <!-- HERO SECTION -->
+        <section class="max-w-7xl mx-auto px-4 md:px-10 py-32 text-center relative z-10" style="max-width: 1280px;">
+            <div class="reveal">
+                <span
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-vibrant-green/10 text-vibrant-green rounded-full text-xs font-black uppercase tracking-widest mb-6">
+                    <span class="material-symbols-outlined text-sm">workspace_premium</span> Legado & Trayectoria
+                </span>
+                <h2 class="text-8xl font-black text-primary-dark leading-tight mb-8" style="font-size: 80px;">NUESTRA
+                    <br /> <span class="text-gradient">HISTORIA</span></h2>
+                <p class="max-w-3xl mx-auto text-xl text-slate-600 leading-relaxed font-medium">Tres décadas
+                    transformando la sabiduría de la naturaleza en ciencia para el bienestar humano, liderando la
+                    industria de productos naturales en el Perú.</p>
+            </div>
+        </section>
+
+        <!-- ROOTS SECTION -->
+        <section class="max-w-7xl mx-auto px-4 md:px-10 py-24 relative z-10" style="max-width: 1280px;">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <div class="relative">
+                        <img class="rounded-[48px] shadow-3xl w-full aspect-square object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaQzH1MbzyNtqZgYaVAUpj23UzYPLow0InedPc-_oEgEIiq3tvE6lqfizx2mTtSebbyY3Kp3optbChw1HDbLt4R-kJOKEj1JXyl5cFg7bFrNZjN8uXi31ydBEoKCbzg_gRvK5Ni1pmxL_O65vBfyZBRt_61rNjCJXa0DRNaspl9f7CizCV20s2w7306-AjrSxVlSznaK0I6LX5PIn6wCy5ihgJz58FExeb7sObsXo2tzLokQnZRFofl2r0s0puQGguUe36EoQjZo4"
+                            alt="Smoothing" />
+                        <div
+                            class="absolute -bottom-6 -right-6 bg-vibrant-green text-white p-6 rounded-3xl shadow-xl flex items-center gap-4">
+                            <span class="material-symbols-outlined text-4xl">eco</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-10 reveal">
+                    <div class="space-y-4">
+                        <span class="text-deep-orange font-black uppercase tracking-widest text-sm">Desde 1990</span>
+                        <h2 class="text-5xl font-black text-primary-dark leading-tight" style="font-size: 48px;">Raíces
+                            Profundas en la Tierra Peruana</h2>
+                    </div>
+                    <p class="text-lg text-slate-600 leading-relaxed">Lo que comenzó como un pequeño laboratorio
+                        familiar impulsado por la pasión por la biodiversidad peruana, hoy es la marca referente en
+                        medicina natural.</p>
+                    <p class="text-lg text-slate-600 leading-relaxed">Nuestra planta de producción cuenta con tecnología
+                        de punta que garantiza que cada insumo conserve sus propiedades originales, respetando los
+                        ciclos de la tierra y apoyando a las comunidades locales de los Andes y la Amazonía.</p>
+                    <div class="grid grid-cols-2 gap-8 pt-6">
+                        <div class="space-y-1">
+                            <div class="text-4xl font-black text-vibrant-green">30+</div>
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Años de Experiencia
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="text-4xl font-black text-vibrant-green">100%</div>
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Insumos Naturales
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION & VISION -->
+        <section class="bg-primary-dark py-32 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 md:px-10 grid md:grid-cols-2 gap-12 relative z-10"
+                style="max-width: 1280px;">
+                <div
+                    class="bg-white/5 backdrop-blur-md rounded-[40px] p-12 border border-white/10 hover:border-vibrant-green/30 transition-all group reveal">
+                    <div
+                        class="w-16 h-16 bg-vibrant-green/20 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-vibrant-green text-3xl">flag</span>
+                    </div>
+                    <h3 class="text-3xl font-black text-white mb-6">Nuestra Misión</h3>
+                    <p class="text-slate-400 text-lg leading-relaxed">Promover una vida saludable y equilibrada a través
+                        de productos naturales de la más alta calidad, fusionando la sabiduría ancestral con la
+                        investigación científica moderna.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-md rounded-[40px] p-12 border border-white/10 hover:border-vibrant-green/30 transition-all group reveal"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="w-16 h-16 bg-primary-bright/20 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary-bright text-3xl">visibility</span>
+                    </div>
+                    <h3 class="text-3xl font-black text-white mb-6">Nuestra Visión</h3>
+                    <p class="text-slate-400 text-lg leading-relaxed">Consolidarnos como la empresa líder a nivel global
+                        en soluciones de salud natural, siendo reconocidos por nuestra innovación constante y compromiso
+                        inquebrantable con la vida.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALUES -->
+        <section class="max-w-7xl mx-auto px-4 md:px-10 py-32 relative z-10" style="max-width: 1280px;">
+            <div class="text-center mb-20 reveal">
+                <span class="text-deep-orange font-black uppercase tracking-widest text-sm">Cimientos de Marca</span>
+                <h2 class="text-5xl font-black text-primary-dark mt-4" style="font-size: 48px;">Valores que nos Guían
+                </h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-slate-50 p-10 rounded-[32px] hover:bg-white hover:shadow-2xl transition-all reveal">
+                    <span class="material-symbols-outlined text-vibrant-green text-4xl mb-6">verified</span>
+                    <h4 class="text-xl font-black text-primary-dark mb-4">Integridad</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Actuamos con transparencia y honestidad en cada
+                        etapa de nuestro proceso.</p>
+                </div>
+                <div class="bg-slate-50 p-10 rounded-[32px] hover:bg-white hover:shadow-2xl transition-all reveal"
+                    style="transition-delay: 100ms;">
+                    <span class="material-symbols-outlined text-primary-bright text-4xl mb-6">science</span>
+                    <h4 class="text-xl font-black text-primary-dark mb-4">Innovación</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Investigamos constantemente para mejorar nuestras
+                        fórmulas naturales.</p>
+                </div>
+                <div class="bg-slate-50 p-10 rounded-[32px] hover:bg-white hover:shadow-2xl transition-all reveal"
+                    style="transition-delay: 200ms;">
+                    <span class="material-symbols-outlined text-deep-orange text-4xl mb-6">favorite</span>
+                    <h4 class="text-xl font-black text-primary-dark mb-4">Empatía</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Entendemos las necesidades de salud de nuestros
+                        clientes de forma integral.</p>
+                </div>
+                <div class="bg-slate-50 p-10 rounded-[32px] hover:bg-white hover:shadow-2xl transition-all reveal"
+                    style="transition-delay: 300ms;">
+                    <span class="material-symbols-outlined text-vibrant-green text-4xl mb-6">forest</span>
+                    <h4 class="text-xl font-black text-primary-dark mb-4">Sustentabilidad</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Protegemos la biodiversidad que nos brinda el
+                        sustento de nuestros productos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEADERSHIP -->
+        <section class="max-w-7xl mx-auto px-4 md:px-10 py-32 relative z-10" style="max-width: 1280px;">
+            <div class="mb-20 reveal">
+                <span class="text-vibrant-green font-black uppercase tracking-widest text-sm">Mentes Brillantes</span>
+                <h2 class="text-5xl font-black text-primary-dark mt-4" style="font-size: 48px;">Liderazgo & Visión</h2>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+                <div class="bg-white rounded-[40px] overflow-hidden shadow-xl border border-slate-100 group reveal">
+                    <div class="h-[400px] relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaQzH1MbzyNtqZgYaVAUpj23UzYPLow0InedPc-_oEgEIiq3tvE6lqfizx2mTtSebbyY3Kp3optbChw1HDbLt4R-kJOKEj1JXyl5cFg7bFrNZjN8uXi31ydBEoKCbzg_gRvK5Ni1pmxL_O65vBfyZBRt_61rNjCJXa0DRNaspl9f7CizCV20s2w7306-AjrSxVlSznaK0I6LX5PIn6wCy5ihgJz58FExeb7sObsXo2tzLokQnZRFofl2r0s0puQGguUe36EoQjZo4"
+                            alt="Armando Araica" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-primary-dark to-transparent flex flex-col justify-end p-8">
+                            <h4 class="text-2xl font-black text-white">Dr. Armando Araica</h4>
+                            <p class="text-vibrant-green font-bold text-sm uppercase tracking-widest">Fundador &
+                                Investigador</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-[40px] overflow-hidden shadow-xl border border-slate-100 group reveal"
+                    style="transition-delay: 200ms;">
+                    <div class="h-[400px] relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaQzH1MbzyNtqZgYaVAUpj23UzYPLow0InedPc-_oEgEIiq3tvE6lqfizx2mTtSebbyY3Kp3optbChw1HDbLt4R-kJOKEj1JXyl5cFg7bFrNZjN8uXi31ydBEoKCbzg_gRvK5Ni1pmxL_O65vBfyZBRt_61rNjCJXa0DRNaspl9f7CizCV20s2w7306-AjrSxVlSznaK0I6LX5PIn6wCy5ihgJz58FExeb7sObsXo2tzLokQnZRFofl2r0s0puQGguUe36EoQjZo4"
+                            alt="Elena Santos" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-primary-dark to-transparent flex flex-col justify-end p-8">
+                            <h4 class="text-2xl font-black text-white">Mg. Elena Santos</h4>
+                            <p class="text-vibrant-green font-bold text-sm uppercase tracking-widest">Directora de
+                                Calidad</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-vibrant-green rounded-[40px] p-12 flex flex-col justify-center text-white reveal"
+                    style="transition-delay: 400ms;">
+                    <h4 class="text-3xl font-black mb-6">Un equipo unido por la pasión natural</h4>
+                    <p class="text-white/80 text-lg leading-relaxed mb-10">Contamos con más de 200 profesionales
+                        dedicados a la investigación, desarrollo y comercialización de bienestar.</p>
+                    <button
+                        class="bg-white text-vibrant-green font-black py-4 px-8 rounded-2xl w-fit hover:scale-105 transition-transform uppercase text-xs tracking-widest">Conocer
+                        más</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="max-w-7xl mx-auto px-4 md:px-10 py-32 border-t border-slate-100 text-center relative z-10"
+            style="max-width: 1280px;">
+            <span class="text-slate-400 font-black uppercase tracking-widest text-xs mb-10 block">Garantía de
+                Excelencia</span>
+            <h2 class="text-4xl font-black text-primary-dark mb-16">Calidad Certificada</h2>
+            <div class="flex flex-wrap justify-center gap-16 opacity-50 grayscale hover:grayscale-0 transition-all">
+                <div class="flex flex-col items-center gap-4">
+                    <span class="material-symbols-outlined text-5xl">award_star</span>
+                    <span class="text-[10px] font-black uppercase tracking-widest">ISO 9001:2015</span>
+                </div>
+                <div class="flex flex-col items-center gap-4">
+                    <span class="material-symbols-outlined text-5xl">health_and_safety</span>
+                    <span class="text-[10px] font-black uppercase tracking-widest">BPM Certificado</span>
+                </div>
+                <div class="flex flex-col items-center gap-4">
+                    <span class="material-symbols-outlined text-5xl">psychology</span>
+                    <span class="text-[10px] font-black uppercase tracking-widest">Orgánico Perú</span>
+                </div>
+                <div class="flex flex-col items-center gap-4">
+                    <span class="material-symbols-outlined text-5xl">verified_user</span>
+                    <span class="text-[10px] font-black uppercase tracking-widest">HACCP Approved</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CANONICAL FOOTER START -->
+    <footer class="bg-background-dark text-white pt-24 pb-12 px-4 md:px-10 border-t border-white/5"
+        style="padding: 96px 40px; background: #06150b;">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 mb-20"
+            style="max-width: 1280px; gap: 64px; margin-bottom: 80px;">
+            <div class="space-y-8" style="display: flex; flex-direction: column; gap: 32px;">
+                <div class="flex items-center gap-3">
+                    <div class="p-1.5 bg-vibrant-green rounded-lg text-white" style="padding: 6px; border-radius: 8px;">
+                        <span class="material-symbols-outlined text-2xl" style="font-size: 24px;">eco</span>
+                    </div>
+                    <h2 class="text-2xl font-black tracking-tighter uppercase" style="font-size: 24px;">Bionaturista
+                    </h2>
+                </div>
+                <p class="text-slate-400 leading-relaxed font-medium">Liderando la industria de productos naturales por
+                    más de 30 años, fusionando ciencia avanzada con sabiduría ancestral.</p>
+                <div class="flex gap-4" style="gap: 16px;">
+                    <a class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-vibrant-green transition-all"
+                        style="width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; text-decoration: none; color: white;"
+                        href="#"><span class="material-symbols-outlined text-xl">social_leaderboard</span></a>
+                    <a class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-vibrant-green transition-all"
+                        style="width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; text-decoration: none; color: white;"
+                        href="#"><span class="material-symbols-outlined text-xl">camera_alt</span></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-black text-lg mb-8 text-vibrant-green uppercase tracking-widest"
+                    style="font-size: 18px; margin-bottom: 32px; color: var(--vibrant-green);">Explorar</h4>
+                <ul class="space-y-4 text-slate-400 font-bold text-sm"
+                    style="list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 14px;">
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_1/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Nuestra Historia</a></li>
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_3/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Productos Estrella</a></li>
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_4/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Catálogo Digital</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black text-lg mb-8 text-vibrant-green uppercase tracking-widest"
+                    style="font-size: 18px; margin-bottom: 32px; color: var(--vibrant-green);">Soporte</h4>
+                <ul class="space-y-4 text-slate-400 font-bold text-sm"
+                    style="list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 14px;">
+                    <li><a class="hover:text-white transition-colors" href="#"
+                            style="text-decoration: none; color: #94a3b8;">Preguntas Frecuentes</a></li>
+                    <li><a class="hover:text-white transition-colors" href="#"
+                            style="text-decoration: none; color: #94a3b8;">Libro de Reclamaciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black text-lg mb-8 text-vibrant-green uppercase tracking-widest"
+                    style="font-size: 18px; margin-bottom: 32px; color: var(--vibrant-green);">BioNews</h4>
+                <form class="flex flex-col gap-3" style="display: flex; flex-direction: column; gap: 12px;">
+                    <input
+                        class="bg-white/5 border-white/10 rounded-2xl px-5 py-4 flex-1 focus:ring-vibrant-green text-sm"
+                        placeholder="Tu correo electrónico" type="email"
+                        style="padding: 16px 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white;" />
+                    <button
+                        class="bg-vibrant-green text-primary-dark font-black py-4 rounded-2xl hover:bg-white transition-all uppercase text-[10px] tracking-[0.2em]"
+                        style="padding: 16px; border-radius: 16px; border:none; cursor:pointer;">Suscribirme</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- CANONICAL FOOTER END -->
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+
+</html>

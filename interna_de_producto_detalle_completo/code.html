@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Clorofila Premium - Bionaturista</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-dark": "#1a4d2e",
+                        "primary-bright": "#4ade80",
+                        "vibrant-green": "#22c55e",
+                        "deep-orange": "#f97316",
+                        "golden-yellow": "#fbbf24",
+                        "background-light": "#ffffff",
+                        "background-dark": "#06150b",
+                        "accent-pink": "#ed1e79",
+                    },
+                    fontFamily: { "display": ["Manrope", "sans-serif"] },
+                    borderRadius: { "DEFAULT": "4px", "lg": "8px", "xl": "12px", "2xl": "16px", "3xl": "24px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base { body { font-family: "Manrope", sans-serif; } }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .tab-active { border-bottom: 3px solid #ed1e79; color: #ed1e79; }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+    <!-- CANONICAL HEADER START -->
+    <div class="bg-primary-dark text-white flex flex-wrap justify-between items-center text-xs font-bold tracking-wide border-b border-primary-bright/20"
+        style="padding: 10px 40px; height: 40px;">
+        <div class="flex flex-wrap" style="gap: 32px;">
+            <span class="flex items-center gap-2" style="gap: 8px;"><span
+                    class="material-symbols-outlined text-sm text-primary-bright" style="font-size: 14px;">call</span>
+                +51 987 654 321</span>
+            <span class="flex items-center gap-2" style="gap: 8px;"><span
+                    class="material-symbols-outlined text-sm text-primary-bright" style="font-size: 14px;">call</span>
+                +51 912 345 678</span>
+            <span class="flex items-center gap-2" style="gap: 8px;"><span
+                    class="material-symbols-outlined text-sm text-primary-bright" style="font-size: 14px;">call</span>
+                +51 900 000 000</span>
+        </div>
+        <div class="hidden sm:flex gap-6 uppercase text-[10px]" style="gap: 24px;">
+            <a class="hover:text-golden-yellow transition-colors flex items-center gap-1" href="#"
+                style="gap: 4px;"><span class="material-symbols-outlined text-xs"
+                    style="font-size: 12px;">location_on</span> Encuentra tu Tienda</a>
+            <a class="hover:text-golden-yellow transition-colors flex items-center gap-1" href="#"
+                style="gap: 4px;"><span class="material-symbols-outlined text-xs"
+                    style="font-size: 12px;">local_shipping</span> Seguimiento</a>
+        </div>
+    </div>
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-b border-slate-100 dark:border-white/5"
+        style="height: 80px;">
+        <div class="max-w-7xl mx-auto px-4 md:px-10 h-full flex items-center justify-between"
+            style="max-width: 1280px; padding: 0 40px;">
+            <div class="flex items-center gap-2.5" style="gap: 10px;">
+                <a href="../bionaturista_home_soluciones_naturales_1/code.html" class="flex items-center gap-2.5"
+                    style="text-decoration:none;">
+                    <div class="p-2 bg-gradient-to-br from-vibrant-green to-primary-dark rounded-xl text-white shadow-lg shadow-vibrant-green/20"
+                        style="padding: 8px;">
+                        <span class="material-symbols-outlined text-3xl" style="font-size: 30px;">eco</span>
+                    </div>
+                    <h1 class="text-2xl font-black tracking-tighter text-primary-dark dark:text-white uppercase"
+                        style="font-size: 24px;">Bionaturista</h1>
+                </a>
+            </div>
+            <nav class="hidden lg:flex items-center font-extrabold text-[13px] uppercase tracking-widest"
+                style="gap: 32px; font-size: 13px;">
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors"
+                    href="../bionaturista_home_soluciones_naturales_2/code.html">Nosotros</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors"
+                    href="../bionaturista_home_soluciones_naturales_3/code.html">Tienda</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors"
+                    href="../bionaturista_home_soluciones_naturales_4/code.html">Bioconsejos</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors" href="#">Tu
+                    Negocio Propio</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors"
+                    href="#">Contacto</a>
+            </nav>
+            <div class="flex items-center" style="gap: 20px;">
+                <div class="hidden md:flex relative group">
+                    <input
+                        class="bg-slate-100 dark:bg-white/5 border-none focus:ring-2 focus:ring-vibrant-green rounded-full px-5 py-2 text-sm w-44 transition-all focus:w-60"
+                        placeholder="Buscar..." type="text" style="width: 176px; padding: 8px 20px;" />
+                    <span
+                        class="material-symbols-outlined absolute right-3 top-2 text-slate-400 group-focus-within:text-vibrant-green"
+                        style="right: 12px; top: 8px;">search</span>
+                </div>
+                <button
+                    class="relative p-2 text-slate-700 dark:text-slate-200 hover:text-vibrant-green transition-colors">
+                    <span class="material-symbols-outlined text-2xl" style="font-size: 24px;">shopping_cart</span>
+                    <span
+                        class="absolute -top-1 -right-1 bg-deep-orange text-white text-[10px] font-black rounded-full w-5 h-5 flex items-center justify-center shadow-md"
+                        style="width: 20px; height: 20px; top: -4px; right: -4px;">2</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- CANONICAL HEADER END -->
+
+    <main class="max-w-7xl mx-auto px-4 md:px-10 py-10" style="max-width: 1280px; padding: 40px;">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest mb-12">
+            <a href="../bionaturista_home_soluciones_naturales_1/code.html" class="hover:text-primary-dark">Inicio</a>
+            <span class="material-symbols-outlined text-sm">chevron_right</span>
+            <a href="../bionaturista_home_soluciones_naturales_3/code.html" class="hover:text-primary-dark">Suplementos
+                Naturales</a>
+            <span class="material-symbols-outlined text-sm">chevron_right</span>
+            <span class="text-primary-dark">Clorofila Premium</span>
+        </nav>
+
+        <div class="grid lg:grid-cols-2 gap-16 mb-24 items-start">
+            <!-- Image Gallery -->
+            <div class="space-y-6">
+                <div
+                    class="aspect-square bg-slate-50 rounded-[48px] overflow-hidden border border-slate-100 shadow-2xl reveal">
+                    <img class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq5U-jkrw1PRs4dEbKktbV0SjmRmA5k3N2UGMi_p_GWdYbmshiL2zwr2UxP98d5Cap2wSaunzpxbW3nkT50tlfeJi7Nl10GPM-2TLhyIDWAe9rbLkdT5g3vMuV9nxC0nDBmTHGQ71cXAuCmqIk4JcpkW2ubryDOuuESmcTvVeVFoTcMr_3rqWG4_dkazSxHARrFtbWMFKcnxQ7WnGGJjGasSIMESBzwH7MsM6vueFxpEa6KB7G-Fx18xAylK12qqbZM7-gKn3_S8M"
+                        alt="Clorofila Principal" />
+                </div>
+                <div class="grid grid-cols-4 gap-4 reveal">
+                    <div class="aspect-square rounded-2xl border-2 border-accent-pink overflow-hidden"><img
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq5U-jkrw1PRs4dEbKktbV0SjmRmA5k3N2UGMi_p_GWdYbmshiL2zwr2UxP98d5Cap2wSaunzpxbW3nkT50tlfeJi7Nl10GPM-2TLhyIDWAe9rbLkdT5g3vMuV9nxC0nDBmTHGQ71cXAuCmqIk4JcpkW2ubryDOuuESmcTvVeVFoTcMr_3rqWG4_dkazSxHARrFtbWMFKcnxQ7WnGGJjGasSIMESBzwH7MsM6vueFxpEa6KB7G-Fx18xAylK12qqbZM7-gKn3_S8M"
+                            class="w-full h-full object-cover" /></div>
+                    <div
+                        class="aspect-square rounded-2xl border-2 border-transparent hover:border-accent-pink overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover" /></div>
+                    <div
+                        class="aspect-square rounded-2xl border-2 border-transparent hover:border-accent-pink overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1540344299330-43575d4d33c5?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover" /></div>
+                    <div
+                        class="aspect-square rounded-2xl border-2 border-transparent hover:border-accent-pink overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1615485500704-8e990f3900f7?auto=format&fit=crop&q=80&w=800"
+                            class="w-full h-full object-cover" /></div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="space-y-8 reveal">
+                <div class="space-y-4">
+                    <span
+                        class="inline-block px-3 py-1 bg-golden-yellow/10 text-golden-yellow rounded-full text-[10px] font-black uppercase tracking-widest">Más
+                        vendido</span>
+                    <h1 class="text-5xl font-black text-primary-dark leading-tight" style="font-size: 56px;">Clorofila
+                        Premium 500ml</h1>
+                    <div class="flex items-center gap-4">
+                        <div class="flex text-golden-yellow">
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1">star</span>
+                            <span class="material-symbols-outlined fill-1 text-slate-300">star</span>
+                        </div>
+                        <span class="text-sm font-bold text-slate-400">4.8 (124 reviews)</span>
+                    </div>
+                </div>
+
+                <div class="flex items-baseline gap-4">
+                    <span class="text-5xl font-black text-primary-dark">S/ 45.00</span>
+                    <span class="text-xl text-slate-400 line-through font-bold">S/ 59.90</span>
+                </div>
+
+                <p class="text-lg text-slate-600 leading-relaxed font-medium">Nuestra clorofila premium se extrae de las
+                    mejores fuentes naturales para brindarte un suplemento que ayuda a purificar la sangre, mejorar la
+                    digestión y aumentar tus niveles de energía de forma natural. Sin colorantes artificiales.</p>
+
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <div class="flex items-center bg-slate-100 rounded-2xl p-2 gap-6 min-w-[140px] justify-between">
+                        <button
+                            class="w-10 h-10 rounded-xl hover:bg-white transition-all flex items-center justify-center text-primary-dark"><span
+                                class="material-symbols-outlined">remove</span></button>
+                        <span class="text-xl font-black text-primary-dark">1</span>
+                        <button
+                            class="w-10 h-10 rounded-xl hover:bg-white transition-all flex items-center justify-center text-primary-dark"><span
+                                class="material-symbols-outlined">add</span></button>
+                    </div>
+                    <button
+                        class="flex-1 bg-accent-pink hover:bg-accent-pink/90 text-white font-black uppercase tracking-widest rounded-2xl py-5 transition-all shadow-lg shadow-accent-pink/20 flex items-center justify-center gap-3">
+                        <span class="material-symbols-outlined">shopping_bag</span> Añadir al Carrito
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 border-t border-slate-100 pt-8">
+                    <div class="flex items-center gap-3 text-slate-500 font-bold text-xs uppercase tracking-wide">
+                        <span class="material-symbols-outlined text-vibrant-green">local_shipping</span> Envío Gratis
+                        (S/ 150+)
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-500 font-bold text-xs uppercase tracking-wide">
+                        <span class="material-symbols-outlined text-vibrant-green">verified</span> 100% Orgánico
+                        Certificado
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Details & Tabs -->
+        <div class="border-t border-slate-100 pt-16">
+            <div class="flex gap-12 border-b border-slate-100 mb-12 overflow-x-auto pb-4">
+                <button
+                    class="text-sm font-black uppercase tracking-widest pb-4 tab-active whitespace-nowrap">Descripción
+                    Detallada</button>
+                <button
+                    class="text-sm font-bold text-slate-400 uppercase tracking-widest pb-4 hover:text-primary-dark transition-colors whitespace-nowrap">Beneficios</button>
+                <button
+                    class="text-sm font-bold text-slate-400 uppercase tracking-widest pb-4 hover:text-primary-dark transition-colors whitespace-nowrap">Modo
+                    de Uso</button>
+                <button
+                    class="text-sm font-bold text-slate-400 uppercase tracking-widest pb-4 hover:text-primary-dark transition-colors whitespace-nowrap">Composición</button>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-20 items-center reveal">
+                <div class="space-y-8">
+                    <h3 class="text-4xl font-black text-primary-dark leading-tight">El poder de la naturaleza en cada
+                        gota</h3>
+                    <p class="text-lg text-slate-600 leading-relaxed font-medium">La clorofila es conocida como la
+                        "sangre de las plantas" debido a su estructura molecular similar a la hemoglobina. Bionaturista
+                        ha desarrollado un proceso de extracción en frío que mantiene intactas todas las propiedades
+                        vitamínicas y minerales de la planta original.</p>
+                    <p class="text-lg text-slate-600 leading-relaxed font-medium">Ideal para personas que buscan un
+                        estilo de vida saludable, desintoxicar el organismo tras periodos de mala alimentación o
+                        simplemente mejorar su vitalidad diaria.</p>
+                </div>
+                <div class="rounded-[40px] overflow-hidden shadow-2xl">
+                    <img class="w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1540344299330-43575d4d33c5?auto=format&fit=crop&q=80&w=800"
+                        alt="Detalle Clorofila" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <section class="mt-40">
+            <div class="flex items-center justify-between mb-12 reveal">
+                <h3 class="text-3xl font-black text-primary-dark">Productos Relacionados</h3>
+                <a href="../bionaturista_home_soluciones_naturales_3/code.html"
+                    class="flex items-center gap-2 text-accent-pink font-black uppercase text-xs tracking-widest hover:gap-4 transition-all">Ver
+                    todo <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Maca -->
+                <div class="bg-white rounded-[32px] p-6 border border-slate-100 shadow-sm hover:shadow-2xl transition-all group reveal cursor-pointer"
+                    onclick="location.href='#'">
+                    <div class="aspect-square rounded-3xl overflow-hidden bg-slate-50 mb-6">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJwxA4eOsHURlHetPzoIXtHl5jKeIx3YpvdnyLw202cgpj8qL3a7Dl5x8kw5kIpv4KiuX3Dq1PNP7AJ2P_rmPCe5Dim-o9_4nfsfq5ndqRxdGDGTiP3AmC7Lw5Mb2R-OMxTmFMVFEbgYwOX0SJ914XP6e57uBHA78mR_iSpmg6JeaxxDpupkEtMdM9j3uv5XrY8IYhHSB6EE1Ce8gRJ2s9p2K8hd4OIXhvtMUd9sXc_EL4I8O2Ia-ze0PP5otWfnDdQZj0jOcIhI0"
+                            alt="Maca" />
+                    </div>
+                    <span
+                        class="text-[10px] font-black uppercase text-vibrant-green tracking-widest block mb-2">Energía</span>
+                    <h4 class="text-xl font-black text-primary-dark mb-4">Maca Andina en Polvo</h4>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-black text-primary-dark">S/ 28.50</span>
+                        <button
+                            class="w-12 h-12 rounded-2xl bg-primary-dark text-white flex items-center justify-center hover:bg-vibrant-green transition-colors"><span
+                                class="material-symbols-outlined text-lg">add_shopping_cart</span></button>
+                    </div>
+                </div>
+                <!-- Vitamina C -->
+                <div class="bg-white rounded-[32px] p-6 border border-slate-100 shadow-sm hover:shadow-2xl transition-all group reveal cursor-pointer"
+                    style="transition-delay: 100ms;" onclick="location.href='#'">
+                    <div class="aspect-square rounded-3xl overflow-hidden bg-slate-50 mb-6">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaQzH1MbzyNtqZgYaVAUpj23UzYPLow0InedPc-_oEgEIiq3tvE6lqfizx2mTtSebbyY3Kp3optbChw1HDbLt4R-kJOKEj1JXyl5cFg7bFrNZjN8uXi31ydBEoKCbzg_gRvK5Ni1pmxL_O65vBfyZBRt_61rNjCJXa0DRNaspl9f7CizCV20s2w7306-AjrSxVlSznaK0I6LX5PIn6wCy5ihgJz58FExeb7sObsXo2tzLokQnZRFofl2r0s0puQGguUe36EoQjZo4"
+                            alt="Vitamina C" />
+                    </div>
+                    <span
+                        class="text-[10px] font-black uppercase text-vibrant-green tracking-widest block mb-2">Inmunidad</span>
+                    <h4 class="text-xl font-black text-primary-dark mb-4">Vitamina C + Zinc</h4>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-black text-primary-dark">S/ 32.00</span>
+                        <button
+                            class="w-12 h-12 rounded-2xl bg-primary-dark text-white flex items-center justify-center hover:bg-vibrant-green transition-colors"><span
+                                class="material-symbols-outlined text-lg">add_shopping_cart</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CANONICAL FOOTER START -->
+    <footer class="bg-background-dark text-white pt-24 pb-12 px-4 md:px-10 border-t border-white/5"
+        style="padding: 96px 40px; background: #06150b;">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 mb-20"
+            style="max-width: 1280px; gap: 64px; margin-bottom: 80px;">
+            <div class="space-y-8" style="display: flex; flex-direction: column; gap: 32px;">
+                <div class="flex items-center gap-3">
+                    <div class="p-1.5 bg-vibrant-green rounded-lg text-white" style="padding: 6px; border-radius: 8px;">
+                        <span class="material-symbols-outlined text-2xl" style="font-size: 24px;">eco</span>
+                    </div>
+                    <h2 class="text-2xl font-black tracking-tighter uppercase" style="font-size: 24px;">Bionaturista
+                    </h2>
+                </div>
+                <p class="text-slate-400 leading-relaxed font-medium">Liderando la industria de productos naturales por
+                    más de 30 años, fusionando ciencia avanzada con sabiduría ancestral.</p>
+                <div class="flex gap-4" style="gap: 16px;">
+                    <a class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-vibrant-green transition-all"
+                        style="width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; text-decoration: none; color: white;"
+                        href="#"><span class="material-symbols-outlined text-xl">social_leaderboard</span></a>
+                    <a class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-vibrant-green transition-all"
+                        style="width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; text-decoration: none; color: white;"
+                        href="#"><span class="material-symbols-outlined text-xl">camera_alt</span></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-black text-lg mb-8 text-vibrant-green uppercase tracking-widest"
+                    style="font-size: 18px; margin-bottom: 32px; color: var(--vibrant-green);">Explorar</h4>
+                <ul class="space-y-4 text-slate-400 font-bold text-sm"
+                    style="list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 14px;">
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_1/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Nuestra Historia</a></li>
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_3/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Productos Estrella</a></li>
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_4/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Catálogo Digital</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black text-lg mb-8 text-vibrant-green uppercase tracking-widest"
+                    style="font-size: 18px; margin-bottom: 32px; color: var(--vibrant-green);">Soporte</h4>
+                <ul class="space-y-4 text-slate-400 font-bold text-sm"
+                    style="list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 14px;">
+                    <li><a class="hover:text-white transition-colors" href="#"
+                            style="text-decoration: none; color: #94a3b8;">Preguntas Frecuentes</a></li>
+                    <li><a class="hover:text-white transition-colors" href="#"
+                            style="text-decoration: none; color: #94a3b8;">Libro de Reclamaciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black text-lg mb-8 text-vibrant-green uppercase tracking-widest"
+                    style="font-size: 18px; margin-bottom: 32px; color: var(--vibrant-green);">BioNews</h4>
+                <form class="flex flex-col gap-3" style="display: flex; flex-direction: column; gap: 12px;">
+                    <input
+                        class="bg-white/5 border-white/10 rounded-2xl px-5 py-4 flex-1 focus:ring-vibrant-green text-sm"
+                        placeholder="Tu correo electrónico" type="email"
+                        style="padding: 16px 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white;" />
+                    <button
+                        class="bg-vibrant-green text-primary-dark font-black py-4 rounded-2xl hover:bg-white transition-all uppercase text-[10px] tracking-[0.2em]"
+                        style="padding: 16px; border-radius: 16px; border:none; cursor:pointer;">Suscribirme</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- CANONICAL FOOTER END -->
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+
+</html>

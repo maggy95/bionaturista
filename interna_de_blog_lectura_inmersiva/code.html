@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Artículo de Blog - Bionaturista</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-dark": "#1a4d2e",
+                        "primary-bright": "#4ade80",
+                        "vibrant-green": "#22c55e",
+                        "deep-orange": "#f97316",
+                        "golden-yellow": "#fbbf24",
+                        "background-light": "#ffffff",
+                        "background-dark": "#06150b",
+                        "accent-pink": "#ed1e79",
+                    },
+                    fontFamily: { "display": ["Manrope", "sans-serif"] },
+                    borderRadius: { "DEFAULT": "4px", "lg": "8px", "xl": "12px", "2xl": "16px", "3xl": "24px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base { body { font-family: "Manrope", sans-serif; } }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+    <!-- CANONICAL HEADER START -->
+    <div class="bg-primary-dark text-white flex flex-wrap justify-between items-center text-xs font-bold tracking-wide border-b border-primary-bright/20"
+        style="padding: 10px 40px; height: 40px;">
+        <div class="flex flex-wrap" style="gap: 32px;">
+            <span class="flex items-center gap-2" style="gap: 8px;"><span
+                    class="material-symbols-outlined text-sm text-primary-bright" style="font-size: 14px;">call</span>
+                +51 987 654 321</span>
+            <span class="flex items-center gap-2" style="gap: 8px;"><span
+                    class="material-symbols-outlined text-sm text-primary-bright" style="font-size: 14px;">call</span>
+                +51 912 345 678</span>
+            <span class="flex items-center gap-2" style="gap: 8px;"><span
+                    class="material-symbols-outlined text-sm text-primary-bright" style="font-size: 14px;">call</span>
+                +51 900 000 000</span>
+        </div>
+        <div class="hidden sm:flex gap-6 uppercase text-[10px]" style="gap: 24px;">
+            <a class="hover:text-golden-yellow transition-colors flex items-center gap-1" href="#"
+                style="gap: 4px;"><span class="material-symbols-outlined text-xs"
+                    style="font-size: 12px;">location_on</span> Encuentra tu Tienda</a>
+            <a class="hover:text-golden-yellow transition-colors flex items-center gap-1" href="#"
+                style="gap: 4px;"><span class="material-symbols-outlined text-xs"
+                    style="font-size: 12px;">local_shipping</span> Seguimiento</a>
+        </div>
+    </div>
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl border-b border-slate-100 dark:border-white/5"
+        style="height: 80px;">
+        <div class="max-w-7xl mx-auto px-4 md:px-10 h-full flex items-center justify-between"
+            style="max-width: 1280px; padding: 0 40px;">
+            <div class="flex items-center gap-2.5" style="gap: 10px;">
+                <a href="../bionaturista_home_soluciones_naturales_1/code.html" class="flex items-center gap-2.5"
+                    style="text-decoration:none;">
+                    <div class="p-2 bg-gradient-to-br from-vibrant-green to-primary-dark rounded-xl text-white shadow-lg shadow-vibrant-green/20"
+                        style="padding: 8px;">
+                        <span class="material-symbols-outlined text-3xl" style="font-size: 30px;">eco</span>
+                    </div>
+                    <h1 class="text-2xl font-black tracking-tighter text-primary-dark dark:text-white uppercase"
+                        style="font-size: 24px;">Bionaturista</h1>
+                </a>
+            </div>
+            <nav class="hidden lg:flex items-center font-extrabold text-[13px] uppercase tracking-widest"
+                style="gap: 32px; font-size: 13px;">
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors"
+                    href="../bionaturista_home_soluciones_naturales_2/code.html">Nosotros</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors"
+                    href="../bionaturista_home_soluciones_naturales_3/code.html">Tienda</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors"
+                    href="../bionaturista_home_soluciones_naturales_4/code.html">Bioconsejos</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors" href="#">Tu
+                    Negocio Propio</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-vibrant-green transition-colors"
+                    href="#">Contacto</a>
+            </nav>
+            <div class="flex items-center" style="gap: 20px;">
+                <div class="hidden md:flex relative group">
+                    <input
+                        class="bg-slate-100 dark:bg-white/5 border-none focus:ring-2 focus:ring-vibrant-green rounded-full px-5 py-2 text-sm w-44 transition-all focus:w-60"
+                        placeholder="Buscar..." type="text" style="width: 176px; padding: 8px 20px;" />
+                    <span
+                        class="material-symbols-outlined absolute right-3 top-2 text-slate-400 group-focus-within:text-vibrant-green"
+                        style="right: 12px; top: 8px;">search</span>
+                </div>
+                <button
+                    class="relative p-2 text-slate-700 dark:text-slate-200 hover:text-vibrant-green transition-colors">
+                    <span class="material-symbols-outlined text-2xl" style="font-size: 24px;">shopping_cart</span>
+                    <span
+                        class="absolute -top-1 -right-1 bg-deep-orange text-white text-[10px] font-black rounded-full w-5 h-5 flex items-center justify-center shadow-md"
+                        style="width: 20px; height: 20px; top: -4px; right: -4px;">2</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- CANONICAL HEADER END -->
+
+    <main>
+        <!-- Article Hero -->
+        <section class="h-[600px] relative overflow-hidden flex items-end reveal">
+            <img class="absolute inset-0 w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=2000"
+                alt="Forest" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+            <div class="max-w-4xl mx-auto px-4 md:px-10 pb-20 relative z-10 space-y-6" style="padding-bottom: 80px;">
+                <span
+                    class="bg-accent-pink text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Nutrición
+                    Holística</span>
+                <h1 class="text-6xl md:text-7xl font-black text-white leading-tight">El Poder de la Medicina Natural:
+                    Guía para un Bienestar Integral</h1>
+                <div class="flex items-center gap-6 text-white/80 text-xs font-bold uppercase tracking-widest">
+                    <div class="flex items-center gap-2"><span
+                            class="material-symbols-outlined text-sm">calendar_today</span> 24 de Mayo, 2024</div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">person</span>
+                        Dra. Elena Alarcón</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <section class="max-w-7xl mx-auto px-4 md:px-10 py-24" style="max-width: 1280px; padding: 96px 40px;">
+            <div class="flex flex-col lg:flex-row gap-20">
+                <article class="flex-1 space-y-12 text-slate-600 text-lg leading-relaxed reveal">
+                    <p class="text-2xl font-medium text-primary-dark">La medicina natural no es solo una alternativa; es
+                        un retorno a nuestras raíces biológicas. En Bionaturista, creemos que la tierra nos brinda todo
+                        lo necesario para sanar.</p>
+
+                    <h2 class="text-4xl font-black text-primary-dark pt-8">¿Por qué elegir lo natural?</h2>
+                    <p>A diferencia de los tratamientos sintéticos, los superalimentos y extractos naturales trabajan en
+                        armonía con los procesos metabólicos del cuerpo. Esto minimiza los efectos secundarios y
+                        promueve una recuperación que va desde la célula hasta el espíritu.</p>
+
+                    <div class="grid grid-cols-2 gap-8 py-8">
+                        <img class="rounded-3xl shadow-xl w-full h-[300px] object-cover"
+                            src="https://images.unsplash.com/photo-1540344299330-43575d4d33c5?auto=format&fit=crop&q=80&w=800"
+                            alt="Frutas" />
+                        <img class="rounded-3xl shadow-xl w-full h-[300px] object-cover"
+                            src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=800"
+                            alt="Aceites" />
+                    </div>
+
+                    <h2 class="text-4xl font-black text-primary-dark pt-8">Componentes Clave: Fitonutrientes</h2>
+                    <p>Los fitonutrientes son compuestos producidos por las plantas para protegerse de virus, bacterias
+                        y hongos. Al consumirlos, nosotros absorbemos esa protección. Elementos como la <span
+                            class="text-vibrant-green font-bold">Cúrcuma</span> o la <span
+                            class="text-vibrant-green font-bold">Maca</span> han demostrado ser pilares en la prevención
+                        de enfermedades degenerativas.</p>
+
+                    <blockquote
+                        class="border-l-8 border-vibrant-green bg-vibrant-green/5 p-10 rounded-3xl italic text-primary-dark font-medium text-xl">
+                        "Que tu alimento sea tu medicina y tu medicina sea tu alimento." — Hipócrates
+                    </blockquote>
+
+                    <!-- Comments -->
+                    <div class="border-t border-slate-100 pt-20 space-y-10">
+                        <h3 class="text-2xl font-black text-primary-dark">Comentarios (4)</h3>
+                        <div class="space-y-8">
+                            <div class="flex gap-6">
+                                <div class="w-12 h-12 bg-slate-200 rounded-full flex-shrink-0"></div>
+                                <div class="space-y-2">
+                                    <h4 class="font-black text-primary-dark text-sm">Mariana Costa <span
+                                            class="text-slate-400 font-bold ml-4">Hace 2 días</span></h4>
+                                    <p class="text-sm">Excelente artículo. No sabía que la temperatura del extracto
+                                        influía tanto en su efectividad. ¡Gracias!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-10 rounded-[40px] space-y-6">
+                            <textarea
+                                class="w-full bg-white border-none rounded-2xl p-6 text-sm focus:ring-2 focus:ring-vibrant-green h-32"
+                                placeholder="Deja tu opinión sobre este artículo..."></textarea>
+                            <button
+                                class="bg-vibrant-green text-white px-8 py-4 rounded-xl font-black uppercase text-[10px] tracking-widest hover:scale-105 transition-transform shadow-lg shadow-vibrant-green/20">Publicar
+                                Comentario</button>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="w-full lg:w-96 space-y-12">
+                    <div class="bg-slate-50 p-10 rounded-[40px] space-y-8 reveal">
+                        <h4 class="text-xs font-black uppercase tracking-widest text-primary-dark">Compartir</h4>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-vibrant-green hover:text-white transition-all shadow-sm"><span
+                                    class="material-symbols-outlined text-xl">share</span></a>
+                            <a href="#"
+                                class="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-vibrant-green hover:text-white transition-all shadow-sm"><span
+                                    class="material-symbols-outlined text-xl">alternate_email</span></a>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8 reveal">
+                        <h4
+                            class="text-xs font-black uppercase tracking-widest text-primary-dark flex items-center gap-2">
+                            <span class="w-8 h-1 bg-vibrant-green"></span> Relacionados
+                        </h4>
+                        <div class="space-y-6">
+                            <div class="flex gap-4 group cursor-pointer">
+                                <div class="w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=400"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform" />
+                                </div>
+                                <div>
+                                    <h5
+                                        class="text-sm font-black text-primary-dark group-hover:text-vibrant-green transition-colors">
+                                        5 Jugos verdes para desintoxicar</h5>
+                                    <span class="text-[10px] font-bold text-slate-400">5 min lectura</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 group cursor-pointer">
+                                <div class="w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1540344299330-43575d4d33c5?auto=format&fit=crop&q=80&w=400"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform" />
+                                </div>
+                                <div>
+                                    <h5
+                                        class="text-sm font-black text-primary-dark group-hover:text-vibrant-green transition-colors">
+                                        Aromaterapia: Alivio para el estrés</h5>
+                                    <span class="text-[10px] font-bold text-slate-400">8 min lectura</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-vibrant-green rounded-[40px] p-10 text-white space-y-6 reveal">
+                        <h4 class="text-xl font-black">Newsletter Saludable</h4>
+                        <p class="text-white/80 text-sm">Recibe consejos de nuestros expertos directamente en tu correo.
+                        </p>
+                        <input type="email"
+                            class="w-full bg-white/20 border-white/20 rounded-xl py-3 px-4 text-sm placeholder:text-white/40 focus:ring-white"
+                            placeholder="tu@email.com" />
+                        <button
+                            class="w-full bg-white text-vibrant-green font-black py-4 rounded-xl text-[10px] uppercase tracking-widest hover:scale-105 transition-transform">Suscribirme</button>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Suggested Treatments -->
+        <section class="max-w-7xl mx-auto px-4 md:px-10 py-32 border-t border-slate-100"
+            style="max-width: 1280px; padding: 96px 40px;">
+            <div class="text-center mb-16 reveal">
+                <h3 class="text-4xl font-black text-primary-dark mb-4">Tratamientos Sugeridos</h3>
+                <div class="w-24 h-1.5 bg-accent-pink mx-auto"></div>
+                <p class="text-slate-500 mt-6 font-medium">Productos seleccionados por nuestros especialistas para
+                    complementar tu lectura.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-[32px] p-6 border border-slate-100 shadow-sm hover:shadow-2xl transition-all group reveal cursor-pointer"
+                    onclick="location.href='../interna_de_producto_detalle_completo/code.html'">
+                    <div class="aspect-square rounded-3xl overflow-hidden bg-slate-50 mb-6 relative">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJwxA4eOsHURlHetPzoIXtHl5jKeIx3YpvdnyLw202cgpj8qL3a7Dl5x8kw5kIpv4KiuX3Dq1PNP7AJ2P_rmPCe5Dim-o9_4nfsfq5ndqRxdGDGTiP3AmC7Lw5Mb2R-OMxTmFMVFEbgYwOX0SJ914XP6e57uBHA78mR_iSpmg6JeaxxDpupkEtMdM9j3uv5XrY8IYhHSB6EE1Ce8gRJ2s9p2K8hd4OIXhvtMUd9sXc_EL4I8O2Ia-ze0PP5otWfnDdQZj0jOcIhI0"
+                            alt="Prod1" />
+                        <span
+                            class="absolute top-4 left-4 bg-primary-dark text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Más
+                            vendido</span>
+                    </div>
+                    <h4 class="text-lg font-black text-primary-dark mb-4">Extracto de Cúrcuma Premium</h4>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-black text-primary-dark">S/ 45.00</span>
+                        <button
+                            class="bg-slate-100 text-primary-dark px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest hover:bg-vibrant-green hover:text-white transition-colors">Añadir</button>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white rounded-[32px] p-6 border border-slate-100 shadow-sm hover:shadow-2xl transition-all group reveal cursor-pointer"
+                    onclick="location.href='../interna_de_producto_detalle_completo/code.html'"
+                    style="transition-delay: 100ms;">
+                    <div class="aspect-square rounded-3xl overflow-hidden bg-slate-50 mb-6 relative">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJwxA4eOsHURlHetPzoIXtHl5jKeIx3YpvdnyLw202cgpj8qL3a7Dl5x8kw5kIpv4KiuX3Dq1PNP7AJ2P_rmPCe5Dim-o9_4nfsfq5ndqRxdGDGTiP3AmC7Lw5Mb2R-OMxTmFMVFEbgYwOX0SJ914XP6e57uBHA78mR_iSpmg6JeaxxDpupkEtMdM9j3uv5XrY8IYhHSB6EE1Ce8gRJ2s9p2K8hd4OIXhvtMUd9sXc_EL4I8O2Ia-ze0PP5otWfnDdQZj0jOcIhI0"
+                            alt="Prod2" />
+                    </div>
+                    <h4 class="text-lg font-black text-primary-dark mb-4">Maca Roja en Polvo 250g</h4>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-black text-primary-dark">S/ 32.00</span>
+                        <button
+                            class="bg-slate-100 text-primary-dark px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest hover:bg-vibrant-green hover:text-white transition-colors">Añadir</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CANONICAL FOOTER START -->
+    <footer class="bg-background-dark text-white pt-24 pb-12 px-4 md:px-10 border-t border-white/5"
+        style="padding: 96px 40px; background: #06150b;">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 mb-20"
+            style="max-width: 1280px; gap: 64px; margin-bottom: 80px;">
+            <div class="space-y-8" style="display: flex; flex-direction: column; gap: 32px;">
+                <div class="flex items-center gap-3">
+                    <div class="p-1.5 bg-vibrant-green rounded-lg text-white" style="padding: 6px; border-radius: 8px;">
+                        <span class="material-symbols-outlined text-2xl" style="font-size: 24px;">eco</span>
+                    </div>
+                    <h2 class="text-2xl font-black tracking-tighter uppercase" style="font-size: 24px;">Bionaturista
+                    </h2>
+                </div>
+                <p class="text-slate-400 leading-relaxed font-medium">Liderando la industria de productos naturales por
+                    más de 30 años, fusionando ciencia avanzada con sabiduría ancestral.</p>
+                <div class="flex gap-4" style="gap: 16px;">
+                    <a class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-vibrant-green transition-all"
+                        style="width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; text-decoration: none; color: white;"
+                        href="#"><span class="material-symbols-outlined text-xl">social_leaderboard</span></a>
+                    <a class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-vibrant-green transition-all"
+                        style="width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; text-decoration: none; color: white;"
+                        href="#"><span class="material-symbols-outlined text-xl">camera_alt</span></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-black text-lg mb-8 text-vibrant-green uppercase tracking-widest"
+                    style="font-size: 18px; margin-bottom: 32px; color: var(--vibrant-green);">Explorar</h4>
+                <ul class="space-y-4 text-slate-400 font-bold text-sm"
+                    style="list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 14px;">
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_1/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Nuestra Historia</a></li>
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_3/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Productos Estrella</a></li>
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_4/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Catálogo Digital</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black text-lg mb-8 text-vibrant-green uppercase tracking-widest"
+                    style="font-size: 18px; margin-bottom: 32px; color: var(--vibrant-green);">Soporte</h4>
+                <ul class="space-y-4 text-slate-400 font-bold text-sm"
+                    style="list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 14px;">
+                    <li><a class="hover:text-white transition-colors" href="#"
+                            style="text-decoration: none; color: #94a3b8;">Preguntas Frecuentes</a></li>
+                    <li><a class="hover:text-white transition-colors" href="#"
+                            style="text-decoration: none; color: #94a3b8;">Libro de Reclamaciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black text-lg mb-8 text-vibrant-green uppercase tracking-widest"
+                    style="font-size: 18px; margin-bottom: 32px; color: var(--vibrant-green);">BioNews</h4>
+                <form class="flex flex-col gap-3" style="display: flex; flex-direction: column; gap: 12px;">
+                    <input
+                        class="bg-white/5 border-white/10 rounded-2xl px-5 py-4 flex-1 focus:ring-vibrant-green text-sm"
+                        placeholder="Tu correo electrónico" type="email"
+                        style="padding: 16px 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white;" />
+                    <button
+                        class="bg-vibrant-green text-primary-dark font-black py-4 rounded-2xl hover:bg-white transition-all uppercase text-[10px] tracking-[0.2em]"
+                        style="padding: 16px; border-radius: 16px; border:none; cursor:pointer;">Suscribirme</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- CANONICAL FOOTER END -->
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+
+</html>
