@@ -75,29 +75,18 @@
     </header>
 
     <main>
-        <!-- Hero Carousel -->
-        <section class="relative w-full overflow-hidden bg-background-dark h-[80vh] min-h-[500px]"
-            style="height: 80vh; min-height: 500px;">
-            <div id="hero-carousel" class="relative w-full h-full flex transition-transform duration-700 ease-in-out">
-                <div class="min-w-full h-full relative flex-shrink-0">
-                    <img class="absolute inset-0 w-full h-full object-cover brightness-[0.7]"
-                        src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1600"
-                        alt="Bioconsejos">
-                    <div
-                        class="absolute inset-0 flex flex-col justify-center px-10 md:px-32 text-white bg-gradient-to-r from-black/50 to-transparent">
-                        <div class="max-w-3xl space-y-6">
-                            <span
-                                class="text-vibrant-green font-black uppercase tracking-[0.4em] text-sm block">Comunidad
-                                Saludable</span>
-                            <h2 class="text-5xl md:text-8xl font-black leading-none uppercase tracking-tighter">
-                                Bioconsejos <br /><span class="text-primary-bright">del Experto</span></h2>
-                            <p class="text-xl text-white/80 max-w-xl font-medium leading-relaxed">Descubre lo último en
-                                nutrición, bienestar y el poder de los superalimentos peruanos explicados por nuestros
-                                especialistas.</p>
-                        </div>
-                    </div>
+        <!-- PAGE HERO -->
+        <section class="bg-primary-dark relative py-24 overflow-hidden">
+            <div class="leaf-bg absolute inset-0 opacity-10"></div>
+            <div class="max-w-7xl mx-auto px-4 md:px-10 relative z-10 text-center" style="max-width: 1280px;">
+                <h2 class="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter mb-4 reveal">
+                    BIOCONSEJOS</h2>
+                <div class="flex items-center justify-center gap-2 text-white/50 text-xs font-bold uppercase tracking-[0.3em] reveal"
+                    style="transition-delay: 200ms;">
+                    <a href="../index.html" class="hover:text-vibrant-green transition-colors">Inicio</a>
+                    <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+                    <span class="text-vibrant-green">Comunidad Saludable</span>
                 </div>
-                <!-- Additional Slides if needed... -->
             </div>
         </section>
 
@@ -138,12 +127,103 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-background-dark text-white py-24 px-4 md:px-10 border-t border-white/5"
-        style="background: #06150b;">
-        <div class="max-w-7xl mx-auto text-center">
-            <p class="text-slate-500 text-xs font-bold uppercase tracking-widest">© 2024 Bionaturista. Todos los
+    <footer class="bg-background-dark text-white pt-24 pb-12 px-4 md:px-10 border-t border-white/5"
+        style="padding: 96px 40px; background: #06150b;">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 mb-20"
+            style="max-width: 1280px; gap: 64px; margin-bottom: 80px;">
+            <div class="space-y-8" style="display: flex; flex-direction: column; gap: 32px;">
+                <div class="flex items-center gap-3">
+                    <div class="p-1.5 bg-vibrant-green rounded-lg text-white" style="padding: 6px; border-radius: 8px;">
+                        <span class="material-symbols-outlined text-2xl" style="font-size: 24px;">eco</span>
+                    </div>
+                    <h2 class="text-2xl font-black tracking-tighter uppercase" style="font-size: 24px;">Bionaturista
+                    </h2>
+                </div>
+                <p class="text-slate-400 leading-relaxed font-medium">Liderando la industria de productos naturales por
+                    más de 30 años, fusionando ciencia avanzada con sabiduría ancestral. Nuestra biodiversidad
+                    concentrada por tu salud.</p>
+                <div class="flex gap-4" style="gap: 16px;">
+                    <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-vibrant-green transition-all"
+                        style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; text-decoration: none; color: white;"
+                        href="#"><span class="material-symbols-outlined text-xl">facebook</span></a>
+                    <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-vibrant-green transition-all"
+                        style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; text-decoration: none; color: white;"
+                        href="#"><span class="material-symbols-outlined text-xl">camera_alt</span></a>
+                    <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-vibrant-green transition-all"
+                        style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; text-decoration: none; color: white;"
+                        href="#"><span class="material-symbols-outlined text-xl">movie</span></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-black text-lg mb-8 text-vibrant-green uppercase tracking-widest"
+                    style="font-size: 18px; margin-bottom: 32px;">Enlaces Rápidos</h4>
+                <ul class="space-y-4 text-slate-400 font-bold text-sm"
+                    style="list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 14px;">
+                    <li><a class="hover:text-white transition-colors" href="../index.html"
+                            style="text-decoration: none; color: #94a3b8;">Inicio</a></li>
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_2/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Nosotros</a></li>
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_3/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Tienda Online</a></li>
+                    <li><a class="hover:text-white transition-colors"
+                            href="../bionaturista_home_soluciones_naturales_4/code.html"
+                            style="text-decoration: none; color: #94a3b8;">Bioconsejos</a></li>
+                    <li><a class="hover:text-white transition-colors" href="#"
+                            style="text-decoration: none; color: #94a3b8;">Certificaciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black text-lg mb-8 text-vibrant-green uppercase tracking-widest"
+                    style="font-size: 18px; margin-bottom: 32px;">Productos</h4>
+                <ul class="space-y-4 text-slate-400 font-bold text-sm"
+                    style="list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 14px;">
+                    <li><a class="hover:text-white transition-colors" href="#"
+                            style="text-decoration: none; color: #94a3b8;">Propóleos</a></li>
+                    <li><a class="hover:text-white transition-colors" href="#"
+                            style="text-decoration: none; color: #94a3b8;">Bebidas y Concentrados</a></li>
+                    <li><a class="hover:text-white transition-colors" href="#"
+                            style="text-decoration: none; color: #94a3b8;">Aceites y Cápsulas</a></li>
+                    <li><a class="hover:text-white transition-colors" href="#"
+                            style="text-decoration: none; color: #94a3b8;">Superalimentos</a></li>
+                    <li><a class="hover:text-white transition-colors" href="#"
+                            style="text-decoration: none; color: #94a3b8;">Vinagres</a></li>
+                </ul>
+            </div>
+            <div class="space-y-8">
+                <div>
+                    <h4 class="font-black text-lg mb-4 text-vibrant-green uppercase tracking-widest"
+                        style="font-size: 18px;">Contáctanos</h4>
+                    <p class="text-slate-400 text-sm font-bold mb-4">Ventas al público: <br />(+51) 979 346 103</p>
+                    <p class="text-slate-400 text-sm font-bold">Ventas a Distribuidores: <br />(+51) 986 670 813</p>
+                </div>
+                <div class="pt-4">
+                    <a href="#"
+                        class="inline-flex items-center gap-3 bg-white/5 border border-white/10 p-4 rounded-2xl hover:bg-vibrant-green transition-all group"
+                        style="text-decoration: none;">
+                        <span
+                            class="material-symbols-outlined text-vibrant-green group-hover:text-white">menu_book</span>
+                        <div class="text-left">
+                            <span
+                                class="block text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">Libro
+                                de</span>
+                            <span class="block text-xs font-black uppercase text-white">Reclamaciones</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6"
+            style="max-width: 1280px;">
+            <p class="text-slate-500 text-xs font-bold uppercase tracking-widest">© 2024 Algas Marinas S.A.C. Todos los
                 derechos reservados.</p>
+            <div class="flex gap-8">
+                <a href="#" class="text-slate-500 hover:text-white text-[10px] font-black uppercase tracking-widest"
+                    style="text-decoration: none;">Políticas de Privacidad</a>
+                <a href="#" class="text-slate-500 hover:text-white text-[10px] font-black uppercase tracking-widest"
+                    style="text-decoration: none;">Términos y Condiciones</a>
+            </div>
         </div>
     </footer>
 
