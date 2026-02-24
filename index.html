@@ -37,8 +37,20 @@
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none }
         .leaf-bg { background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAtYQCILSlztloYMkwX4w_e-zb4HQ96DlscJQGqh3xiNajPgqJf453TO32z-038njdUuouqwhVFSkROFcaNwka-D5zFhICtpT-qj-KEJxJxkXiE6V8EbSncUvaXwhH36DChecz58lRpeDTxwu8JDqgvlp7jmQVr9FumRLYljxzegcYDv-jbaZokLe4W4f_6P7sZF7f92F0ILLeANrdV_IBFNd3-P7U8yCn9cJwQX_BvfOUNEVUmvJI_7FMr8mqX5Z46klhGvA-Knak); opacity: 0.05 }
         .gradient-mesh { background: radial-gradient(at 0% 0%, rgba(34, 197, 94, 0.15) 0, transparent 50%), radial-gradient(at 100% 0%, rgba(251, 191, 36, 0.1) 0, transparent 50%), radial-gradient(at 100% 100%, rgba(249, 115, 22, 0.1) 0, transparent 50%) }
+        
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        .stagger-reveal > * { opacity: 0; transform: translateY(20px); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .stagger-reveal.active > * { opacity: 1; transform: translateY(0); }
+        
+        /* Stagger delays */
+        .stagger-reveal.active > *:nth-child(1) { transition-delay: 100ms; }
+        .stagger-reveal.active > *:nth-child(2) { transition-delay: 200ms; }
+        .stagger-reveal.active > *:nth-child(3) { transition-delay: 300ms; }
+        .stagger-reveal.active > *:nth-child(4) { transition-delay: 400ms; }
+        
+        .magnetic-wrap { display: inline-block; transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
     </style>
 </head>
 
@@ -137,18 +149,20 @@
                     <p class="text-xl text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed font-medium"
                         style="font-size: 20px; max-width: 512px;">Potenciamos tu salud con extractos puros y tecnología
                         avanzada. El equilibrio perfecto entre lo ancestral y lo científico.</p>
-                    <div class="flex flex-wrap gap-5" style="gap: 20px;">
-                        <button
-                            class="bg-vibrant-green hover:bg-primary-dark text-white font-black py-5 px-10 rounded-2xl shadow-2xl shadow-vibrant-green/30 transition-all hover:-translate-y-1 uppercase text-sm tracking-widest"
-                            style="padding: 20px 40px; border-radius: 16px; border:none; cursor:pointer;"
-                            onclick="location.href='./bionaturista_home_soluciones_naturales_3/code.html'">Compra
-                            Online</button>
+                    <div class="flex flex-wrap gap-5 rotate-parallax" style="gap: 20px;">
+                        <div class="magnetic-wrap">
+                            <button
+                                class="bg-vibrant-green hover:bg-primary-dark text-white font-black py-5 px-10 rounded-2xl shadow-2xl shadow-vibrant-green/30 transition-all uppercase text-sm tracking-widest"
+                                style="padding: 20px 40px; border-radius: 16px; border:none; cursor:pointer;"
+                                onclick="location.href='./bionaturista_home_soluciones_naturales_3/code.html'">Compra
+                                Online</button>
+                        </div>
                         <button
                             class="border-2 border-slate-100 text-primary-dark font-black py-5 px-10 rounded-2xl hover:bg-slate-50 transition-all uppercase text-sm tracking-widest"
                             style="padding: 20px 40px; border-radius: 16px;">Catálogo 2024</button>
                     </div>
                 </div>
-                <div class="relative reveal" style="transition-delay: 200ms;">
+                <div class="relative reveal rotate-parallax" style="transition-delay: 200ms;">
                     <div class="relative aspect-square rounded-[3rem] overflow-hidden shadow-[0_32px_64px_-12px_rgba(0,0,0,0.15)] transform hover:rotate-1 transition-transform duration-700"
                         style="border-radius: 48px; height: 500px; width: 500px;">
                         <img class="w-full h-full object-cover"
@@ -176,7 +190,7 @@
                         style="font-size: 48px;">Tratamientos Bio</h3>
                 </div>
             </div>
-            <div class="flex gap-8 overflow-x-auto pb-12 hide-scrollbar snap-x reveal">
+            <div class="flex gap-8 overflow-x-auto pb-12 hide-scrollbar snap-x reveal stagger-reveal">
                 <div class="snap-start min-w-[320px] group cursor-pointer"
                     onclick="location.href='./interna_de_producto_detalle_completo/code.html'">
                     <div class="relative h-[420px] rounded-3xl overflow-hidden mb-6 shadow-xl">
@@ -249,7 +263,7 @@
                 <h3 class="text-5xl font-black text-primary-dark">Nuestros Favoritos</h3>
                 <div class="w-24 h-1.5 bg-golden-yellow mx-auto mt-6"></div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 reveal stagger-reveal">
                 <div class="bg-white rounded-[40px] p-6 shadow-sm border border-slate-50 hover:shadow-2xl transition-all group reveal cursor-pointer"
                     onclick="location.href='./interna_de_producto_detalle_completo/code.html'">
                     <div class="aspect-square rounded-[32px] overflow-hidden mb-6 bg-slate-50 relative">
@@ -283,7 +297,7 @@
                         <h3 class="text-5xl font-black text-primary-dark mt-3">Bioconsejos del Experto</h3>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal stagger-reveal">
                     <!-- Blog Item -->
                     <div class="bg-white rounded-[40px] overflow-hidden shadow-sm hover:shadow-2xl transition-all group reveal cursor-pointer"
                         onclick="location.href='./interna_de_blog_lectura_inmersiva/code.html'">
@@ -379,6 +393,31 @@
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+        // Magnetic Button Effect
+        document.querySelectorAll('.magnetic-wrap').forEach(wrap => {
+            const btn = wrap.querySelector('button');
+            wrap.addEventListener('mousemove', (e) => {
+                const rect = wrap.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            });
+            wrap.addEventListener('mouseleave', () => {
+                btn.style.transform = `translate(0px, 0px)`;
+            });
+        });
+
+        // Subtle Parallax
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelectorAll('.rotate-parallax').forEach(el => {
+                const speed = 0.05;
+                el.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+            const leaves = document.querySelector('.leaf-bg');
+            if (leaves) leaves.style.transform = `translateY(${scrolled * 0.1}px)`;
+        });
     </script>
 </body>
 
